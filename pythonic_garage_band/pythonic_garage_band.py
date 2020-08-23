@@ -18,8 +18,15 @@ class Band():
             result+= f'{i.play_solo()}\n'
         return result
     
-    def to_list(self):
+    @staticmethod
+    def to_list():
         return Band.members
+
+    def __str__(self):
+        return f"Band <{self.name}>"
+    
+    def __repr__(self):
+        return f" '{self.name}' "
 
 class Musician():
     
@@ -96,5 +103,7 @@ if __name__ == "__main__":
     habail.add_members(aziz)
     habail.add_members(saleh)
     habail.add_members(emad)
-    print(habail.play_solos())
     print(habail.bands)
+    print(habail.__str__())
+    print(habail.to_list())
+    print(habail.play_solos())
