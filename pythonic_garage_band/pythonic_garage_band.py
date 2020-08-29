@@ -18,9 +18,9 @@ class Band():
             result+= f'{i.play_solo()}\n'
         return result
     
-    @staticmethod
-    def to_list():
-        return Band.members
+    @classmethod 
+    def to_list(cls):
+        return cls.members
 
     def __str__(self):
         return f"Band <{self.name}>"
